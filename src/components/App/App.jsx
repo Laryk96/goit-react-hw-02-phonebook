@@ -31,7 +31,7 @@ class App extends Component {
 
   chackName = newName => {
     if (this.state.contacts.some(({ name }) => name === newName)) {
-      Report.warning(`${newName} is already in contacts`, '');
+      Report.warning(`${newName} is already in contacts`);
       return false;
     }
 
