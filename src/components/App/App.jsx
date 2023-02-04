@@ -5,6 +5,7 @@ import ContactForm from 'components/ContactForm';
 import Filter from '../Filter';
 import ContactList from 'components/ContactList';
 import { Title, Container, SubTitle } from './App.styled';
+import ContactFormFormik from 'components/ContactFormFormik';
 
 class App extends Component {
   state = {
@@ -59,16 +60,31 @@ class App extends Component {
     const { filter } = this.state;
     const visibleFilter = this.getVisibleContacts();
     return (
-      <Container>
-        <Title>Phonebook</Title>
-        <ContactForm onSubmit={this.getContactForm} />
-        <SubTitle>Contacts</SubTitle>
-        <Filter value={filter} toFilter={this.handleFilter} />
-        <ContactList
-          renderItems={visibleFilter}
-          deleteContact={this.deleteContact}
-        />
-      </Container>
+      <>
+        <Container>
+          <Title>Phonebook</Title>
+          <ContactForm onSubmit={this.getContactForm} />
+          <SubTitle>Contacts</SubTitle>
+          <Filter value={filter} toFilter={this.handleFilter} />
+          <ContactList
+            renderItems={visibleFilter}
+            deleteContact={this.deleteContact}
+          />
+        </Container>
+
+        <Container>
+          <Title>
+            Phonebook <p>Formik and Yup</p>
+          </Title>
+          <ContactFormFormik onSubmit={this.getContactForm} />
+          <SubTitle>Contacts</SubTitle>
+          <Filter value={filter} toFilter={this.handleFilter} />
+          <ContactList
+            renderItems={visibleFilter}
+            deleteContact={this.deleteContact}
+          />
+        </Container>
+      </>
     );
   }
 }
