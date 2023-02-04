@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Report } from 'notiflix';
 
 import ContactForm from 'components/ContactForm';
