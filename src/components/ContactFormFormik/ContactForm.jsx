@@ -30,7 +30,7 @@ const ContactForm = ({ onSubmit }) => {
       .min(3, 'to short, min: 3')
       .max(15, 'to long, max: 15')
       .required(),
-    number: yup.number().typeError().moreThan(12, 'fnnf'),
+    number: yup.number().typeError().moreThan(12, 'fnnf').required(),
   });
 
   return (
