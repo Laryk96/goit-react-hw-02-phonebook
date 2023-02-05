@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
-const ContatsList = styled.ul``;
-const ContatsItem = styled.li`
+const ContactsList = styled.ul``;
+const ContactItem = styled.li`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -25,4 +25,4 @@ const LabelItem = styled.span`
   margin-left: 30px;
   gap: 100px;
 `;
-export { ContatsList, ContatsItem, ContactName, Button, LabelItem };
+export { ContactsList, ContactItem, ContactName, Button, LabelItem };

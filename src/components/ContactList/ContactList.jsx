@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
 import {
-  ContatsList,
-  ContatsItem,
+  ContactsList,
+  ContactItem,
   ContactName,
   Button,
   LabelItem,
@@ -10,7 +10,7 @@ import {
 
 const ContactList = ({ renderItems, deleteContact }) => {
   return (
-    <ContatsList>
+    <ContactsList>
       {renderItems[0] && (
         <LabelItem>
           <span>Name:</span>
@@ -19,7 +19,7 @@ const ContactList = ({ renderItems, deleteContact }) => {
       )}
 
       {renderItems.map(({ id, name, number }) => (
-        <ContatsItem key={id}>
+        <ContactItem key={id}>
           <ContactName>
             <span> {name}:</span> <span>{number}</span>
           </ContactName>
@@ -30,9 +30,9 @@ const ContactList = ({ renderItems, deleteContact }) => {
           >
             Delete
           </Button>
-        </ContatsItem>
+        </ContactItem>
       ))}
-    </ContatsList>
+    </ContactsList>
   );
 };
 export default ContactList;
